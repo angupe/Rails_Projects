@@ -1,0 +1,23 @@
+<h1>Word Central</h1>
+
+<p><%= @word_count %></p>
+
+<p><%= @text %></p>
+
+<p>Reading time, in seconds... <%= @word_time %></p>
+
+
+<a href="/">Home page</a>
+
+
+
+<p>Word frequency</p>
+
+<ul>
+    <% @order_words.each_with_index do |val, index| %>
+        <% if index < 10 %>
+            <li><%= val[0].to_s %> <%= val[1] %></li>
+        <% end %>
+    <% end %>
+</ul>
+
